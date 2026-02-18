@@ -6,7 +6,7 @@ export DH_VERBOSE = 1
 	dh $@
 
 override_dh_auto_build:
-	npm install
+	npm install --legacy-peer-deps
 	npm run build
 
 override_dh_auto_install:

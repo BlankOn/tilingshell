@@ -58,3 +58,10 @@ package-lock.json
 *tilingshell@ferrarodomenico.com.zip
 
 .vagrant
+
+# Debian build artifacts
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/tilingshell-gnome-shell-extension.substvars
+debian/tilingshell-gnome-shell-extension/
