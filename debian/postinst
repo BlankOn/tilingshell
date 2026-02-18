@@ -3,9 +3,9 @@ set -e
 
 case "$1" in
     configure)
-        # Update dconf database
-        if command -v dconf >/dev/null 2>&1; then
-            dconf update || true
+        # Compile GSettings schemas
+        if command -v glib-compile-schemas >/dev/null 2>&1; then
+            glib-compile-schemas /usr/share/glib-2.0/schemas/ || true
         fi
 
         # Deploy autostart to existing users (uid >= 1000)
@@ -21,6 +21,12 @@ case "$1" in
                 mkdir -p "$AUTOSTART_DIR"
                 cp "$DESKTOP_FILE" "$AUTOSTART_DIR/"
                 chown -R "$USER_NAME":"$USER_NAME" "$HOME_DIR/.config/autostart" || true
+
+                # Update user's extension copy immediately
+                UPDATE_SCRIPT="/usr/lib/tilingshell-extension/tilingshell-update-user.sh"
+                if [ -x "$UPDATE_SCRIPT" ]; then
+                    su -s /bin/sh -c "$UPDATE_SCRIPT" "$USER_NAME" || true
+                fi
             done
         fi
         ;;

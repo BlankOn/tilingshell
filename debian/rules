@@ -10,11 +10,9 @@ override_dh_auto_install:
 	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/gnome-shell/extensions/tilingshell@ferrarodomenico.com
 	cp -r dist/* $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/gnome-shell/extensions/tilingshell@ferrarodomenico.com/
 
-	# Install dconf settings
-	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/db/local.d
-	install -m 644 debian/dconf/db/local.d/00-tilingshell-global-behaviours $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/db/local.d/
-	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/profile
-	install -m 644 debian/dconf/profile/user $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/profile/
+	# Install GSettings override
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/glib-2.0/schemas
+	install -m 644 debian/10_tilingshell.gschema.override $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/glib-2.0/schemas/
 
 	# Install per-user update script
 	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/lib/tilingshell-extension

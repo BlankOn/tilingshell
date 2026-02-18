@@ -9,7 +9,7 @@ Rules-Requires-Root: no
 
 Package: tilingshell-gnome-shell-extension
 Architecture: all
-Depends: gnome-shell (>= 45~), dconf-cli, ${misc:Depends}
+Depends: gnome-shell (>= 45~), ${misc:Depends}
 Description: Tiling Shell GNOME Shell Extension
  A GNOME Shell extension that provides advanced tiling window management.
  Extends GNOME Shell with a Windows-like snap assist, layouts, and

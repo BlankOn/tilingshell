@@ -1,0 +1,6 @@
+[org.gnome.shell]
+enabled-extensions=['tilingshell@ferrarodomenico.com']
+
+[org.gnome.shell.extensions.tilingshell]
+inner-gaps=uint32 5
+outer-gaps=uint32 0
