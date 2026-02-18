@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Tiling Shell Extension Updater
+Exec=/usr/lib/tilingshell-extension/tilingshell-update-user.sh
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,4 @@
+# Tiling Shell GNOME Shell Extension global settings
+
+[org/gnome/shell]
+enabled-extensions=['tilingshell@ferrarodomenico.com']

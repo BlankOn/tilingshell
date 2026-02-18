@@ -1,0 +1,6 @@
+tilingshell-gnome-shell-extension (17.3-1) verbeek; urgency=medium
+
+  * Initial Debian packaging of Tiling Shell GNOME extension.
+  * Per-user autostart-based deployment for extension management.
+
+ -- BlankOn Linux <blankon-dev@googlegroups.com>  Wed, 18 Feb 2026 12:00:00 +0700

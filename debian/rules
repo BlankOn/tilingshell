@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	npm install
+	npm run build
+
+override_dh_auto_install:
+	# Install extension files from dist/
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/gnome-shell/extensions/tilingshell@ferrarodomenico.com
+	cp -r dist/* $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/share/gnome-shell/extensions/tilingshell@ferrarodomenico.com/
+
+	# Install dconf settings
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/db/local.d
+	install -m 644 debian/dconf/db/local.d/00-tilingshell-global-behaviours $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/db/local.d/
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/profile
+	install -m 644 debian/dconf/profile/user $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/dconf/profile/
+
+	# Install per-user update script
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/lib/tilingshell-extension
+	install -m 755 debian/tilingshell-update-user.sh $(CURDIR)/debian/tilingshell-gnome-shell-extension/usr/lib/tilingshell-extension/
+
+	# Install autostart desktop file to /etc/skel
+	install -d $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/skel/.config/autostart
+	install -m 644 debian/tilingshell-extension-update.desktop $(CURDIR)/debian/tilingshell-gnome-shell-extension/etc/skel/.config/autostart/

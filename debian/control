@@ -1,0 +1,16 @@
+Source: tilingshell-gnome-shell-extension
+Section: gnome
+Priority: optional
+Maintainer: BlankOn Linux <blankon-dev@googlegroups.com>
+Build-Depends: debhelper-compat (= 13), nodejs, npm, libglib2.0-dev-bin
+Standards-Version: 4.6.2
+Homepage: https://github.com/domferr/tilingshell
+Rules-Requires-Root: no
+
+Package: tilingshell-gnome-shell-extension
+Architecture: all
+Depends: gnome-shell (>= 45~), dconf-cli, ${misc:Depends}
+Description: Tiling Shell GNOME Shell Extension
+ A GNOME Shell extension that provides advanced tiling window management.
+ Extends GNOME Shell with a Windows-like snap assist, layouts, and
+ keyboard shortcuts for efficient window tiling.
