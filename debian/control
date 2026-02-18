@@ -2,7 +2,7 @@ Source: tilingshell-gnome-shell-extension
 Section: gnome
 Priority: optional
 Maintainer: BlankOn Linux <blankon-dev@googlegroups.com>
-Build-Depends: debhelper-compat (= 13), libglib2.0-dev-bin
+Build-Depends: debhelper-compat (= 13), libglib2.0-dev-bin, nodejs, npm
 Standards-Version: 4.6.2
 Homepage: https://github.com/domferr/tilingshell
 Rules-Requires-Root: no
