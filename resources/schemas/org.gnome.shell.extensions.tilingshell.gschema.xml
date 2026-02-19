@@ -38,12 +38,12 @@
             <description>Shows an indicator on top panel.</description>
         </key>
         <key name="inner-gaps" type="u">
-            <default>16</default>
+            <default>5</default>
             <summary>Inner gaps</summary>
             <description>Internal gaps between tiles in a layout.</description>
         </key>
         <key name="outer-gaps" type="u">
-            <default>8</default>
+            <default>0</default>
             <summary>Outer gaps</summary>
             <description>External gaps between the layout and the monitor borders.</description>
         </key>
