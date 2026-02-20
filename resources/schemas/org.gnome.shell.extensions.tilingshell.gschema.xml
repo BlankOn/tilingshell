@@ -33,7 +33,7 @@
             <description>Change the desktop layout to match the layout used when tiling a window with Snap Assistant.</description>
         </key>
         <key name="show-indicator" type="b">
-            <default>true</default>
+            <default>false</default>
             <summary>Shows indicator</summary>
             <description>Shows an indicator on top panel.</description>
         </key>

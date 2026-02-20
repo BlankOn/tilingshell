@@ -544,45 +544,38 @@ class Settings {
           new Tile({
             x: 0,
             y: 0,
-            height: 0.5,
-            width: 0.22,
-            groups: [1, 2]
+            height: 1,
+            width: 0.5,
+            groups: [1]
           }),
-          // top-left
+          new Tile({
+            x: 0.5,
+            y: 0,
+            height: 1,
+            width: 0.5,
+            groups: [1]
+          })
+        ],
+        "Layout 1"
+      ),
+      new Layout(
+        [
+          new Tile({
+            x: 0,
+            y: 0,
+            height: 0.5,
+            width: 1,
+            groups: [1]
+          }),
           new Tile({
             x: 0,
             y: 0.5,
             height: 0.5,
-            width: 0.22,
-            groups: [1, 2]
-          }),
-          // bottom-left
-          new Tile({
-            x: 0.22,
-            y: 0,
-            height: 1,
-            width: 0.56,
-            groups: [2, 3]
-          }),
-          // center
-          new Tile({
-            x: 0.78,
-            y: 0,
-            height: 0.5,
-            width: 0.22,
-            groups: [3, 4]
-          }),
-          // top-right
-          new Tile({
-            x: 0.78,
-            y: 0.5,
-            height: 0.5,
-            width: 0.22,
-            groups: [3, 4]
+            width: 1,
+            groups: [1]
           })
-          // bottom-right
         ],
-        "Layout 1"
+        "Layout 2"
       ),
       new Layout(
         [
@@ -608,7 +601,7 @@ class Settings {
             groups: [2]
           })
         ],
-        "Layout 2"
+        "Layout 3"
       ),
       new Layout(
         [
@@ -627,7 +620,7 @@ class Settings {
             groups: [1]
           })
         ],
-        "Layout 3"
+        "Layout 4"
       ),
       new Layout(
         [
@@ -646,7 +639,7 @@ class Settings {
             groups: [1]
           })
         ],
-        "Layout 4"
+        "Layout 5"
       )
     ]);
   }
