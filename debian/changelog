@@ -1,3 +1,9 @@
+tilingshell-gnome-shell-extension (17.8-3) verbeek; urgency=medium
+
+  * Version bump.
+
+ -- BlankOn Linux <blankon-dev@googlegroups.com>  Fri, 06 Mar 2026 18:00:00 +0700
+
 tilingshell-gnome-shell-extension (17.8-2) verbeek; urgency=medium
 
   * Sync layouts.example.json with default layouts in source code.

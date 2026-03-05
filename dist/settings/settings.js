@@ -583,22 +583,8 @@ class Settings {
             x: 0,
             y: 0,
             height: 1,
-            width: 0.22,
+            width: 1,
             groups: [1]
-          }),
-          new Tile({
-            x: 0.22,
-            y: 0,
-            height: 1,
-            width: 0.56,
-            groups: [1, 2]
-          }),
-          new Tile({
-            x: 0.78,
-            y: 0,
-            height: 1,
-            width: 0.22,
-            groups: [2]
           })
         ],
         "Layout 3"
