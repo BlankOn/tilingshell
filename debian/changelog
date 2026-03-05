@@ -1,3 +1,10 @@
+tilingshell-gnome-shell-extension (17.8-2) verbeek; urgency=medium
+
+  * Sync layouts.example.json with default layouts in source code.
+  * Remove debian build artifacts from source tree.
+
+ -- BlankOn Linux <blankon-dev@googlegroups.com>  Fri, 06 Mar 2026 12:00:00 +0700
+
 tilingshell-gnome-shell-extension (17.8-1) verbeek; urgency=medium
 
   * New upstream release 17.8.
